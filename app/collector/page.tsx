@@ -1,14 +1,14 @@
-import LoginForm from '@/app/ui/login-form/LoginForm';
 import { Suspense } from 'react';
 import CenteredLayout from '@/app/components/centered-layout/CenteredLayout';
 import CardContainer from '@/app/components/card-container/CardContainer';
+import MediaCrawlerForm from '@/app/ui/media-crawler-form/MediaCrawlerForm';
 
-export default function LoginPage() {
+export default function HomePage() {
   return (
     <CenteredLayout>
       <CardContainer>
         <Suspense>
-          <LoginForm />
+          <MediaCrawlerForm />
         </Suspense>
       </CardContainer>
     </CenteredLayout>

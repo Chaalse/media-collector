@@ -1,0 +1,103 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid var(--border-primary);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 200ms ease, border-color 200ms ease, opacity 200ms ease;
+  line-height: 1;
+  text-decoration: none;
+  user-select: none;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* ---------- Variants ---------- */
+
+.primary {
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
+
+.primary:hover:not(.disabled):not(.loading) {
+  background-color: var(--primary-hover);
+}
+
+.primary:active:not(.disabled):not(.loading) {
+  background-color: var(--primary-active);
+}
+
+/* ---------- Sizes ---------- */
+
+.sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  min-height: 2.75rem;
+  --spinner-size: 1rem;
+}
+
+.md {
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+  min-height: 2.75rem;
+  --spinner-size: 1.25rem;
+}
+
+.lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem;
+  min-height: 3rem;
+  --spinner-size: 1.5rem;
+}
+
+.xl {
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  min-height: 3.5rem;
+  --spinner-size: 1.75rem;
+}
+
+/* ---------- States ---------- */
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.loading {
+  cursor: default;
+  pointer-events: none;
+}
+
+/* ---------- Modifiers ---------- */
+
+.fullWidth {
+  display: flex;
+  width: 100%;
+}
+
+/* ---------- Spinner ---------- */
+
+.spinner {
+  display: inline-block;
+  width: var(--spinner-size);
+  height: var(--spinner-size);
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 600ms linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
