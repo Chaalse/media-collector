@@ -139,5 +139,10 @@
 
 .errorText {
   composes: textBase;
-  color: var(--error-text);
+  font-weight: bold;
+  color: var(--error-bg);
+  background-color: var(--error);
+  width: fit-content;
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.25rem;
 }

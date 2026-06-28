@@ -45,8 +45,7 @@ body {
   --focus-ring: #c635ff;
 
   /* Feedback */
-  --error: #dc2626;
-  --error-text: #dc2626;
+  --error: #ad1818;
   --error-bg: #fef2f2;
   --success: #16a34a;
   --success-bg: #f0fdf4;
