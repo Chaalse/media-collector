@@ -23,7 +23,16 @@
   background-color: var(--surface-primary);
   color: var(--primary-hover);
   font-weight: bold;
+  border: 2px solid var(--primary-hover);
+  border-top: 3px solid var(--primary-hover);
   transition: border-color 200ms ease;
+  box-shadow: 
+    1px 1px var(--primary-hover),
+    2px 2px var(--primary-hover),
+    3px 3px var(--primary-hover),
+    4px 4px var(--primary-hover),
+    5px 5px var(--primary-hover);
+  
 }
 
 .input::placeholder {
@@ -33,7 +42,6 @@
 
 .input:focus {
   outline: none;
-  border: 2px solid var(--border-primary);
 }
 
 /* ---------- Sizes ---------- */

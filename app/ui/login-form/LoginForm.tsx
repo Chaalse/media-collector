@@ -1,9 +1,9 @@
 'use client';
 
 import { useActionState, useState } from 'react';
-import Image from 'next/image';
 import Input from '@/app/components/input/Input';
 import Button from '@/app/components/button/Button';
+import Logo from '@/app/components/logo/Logo';
 import styles from './login-form.module.css';
 import { authenticate } from './actions';
 
@@ -36,9 +36,10 @@ export default function LoginForm() {
 
   return (
     <form action={formAction} className={styles.form} noValidate>
-      <div className={styles.logo}>
-        <Image src="/next.svg" alt="" width={200} height={200} priority />
-      </div>
+      <Logo
+        priority
+        scale="main"
+      />
       <Input
         name="email"
         type="email"

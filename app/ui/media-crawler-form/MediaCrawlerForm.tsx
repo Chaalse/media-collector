@@ -2,9 +2,9 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 import Input from '@/app/components/input/Input';
 import Button from '@/app/components/button/Button';
+import Logo from '@/app/components/logo/Logo';
 import styles from './media-crawler-form.module.css';
 
 function isValidUrl(value: string): boolean {
@@ -79,9 +79,10 @@ export default function MediaCrawlerForm() {
 
   return (
     <form onSubmit={handleSubmit} className={styles.form} noValidate>
-      <div className={styles.logo}>
-        <Image src="/public/next.svg" alt="" width={200} height={200} />
-      </div>
+      <Logo
+      priority
+      scale="main"
+      />
       <Input
         type="url"
         value={url}
@@ -93,20 +94,21 @@ export default function MediaCrawlerForm() {
         onChange={handleChange}
         disabled={isLoading}
       />
-      <Button type="submit" fullWidth loading={isLoading}>
-        Get that reel!
-      </Button>
       {showSuccess && (
         <p className={styles.successMessage}>URL submitted successfully!</p>
       )}
-      <p className={styles.divider}>OR</p>
-      <Button
-        type="button"
-        fullWidth
-        onClick={() => router.push('/collector/collections')}
-      >
-        Check your collections!
-      </Button>
+      <div className={styles.buttonRow}>
+        <Button type="submit" loading={isLoading}>
+          Scrape a reel!
+        </Button>
+        <span className={styles.divider}>OR</span>
+        <Button
+          type="button"
+          onClick={() => router.push('/collector/scrappins')}
+        >
+          Go to scrappins!
+        </Button>
+      </div>
     </form>
   );
 }

@@ -5,20 +5,4 @@
   width: 100%;
 }
 
-.logo {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 0.5rem;
-}
 
-.logo img {
-  width: 4rem;
-  height: 4rem;
-}
-
-@media (min-width: 768px) {
-  .logo img {
-    width: 5rem;
-    height: 5rem;
-  }
-}

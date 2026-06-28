@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+* {
+    font-family: 'Tahoma', 'Geneva', sans-serif;
+  }
+
 html,
 body {
   height: 100%;
@@ -11,20 +15,20 @@ body {
 }
 
 :root {
-  --background: #8f44ad;
+  --background: #9147ae;
   --foreground: #ffffff;
 
-  /* Primary brand 9147ae*/
-  --primary: #8f44ad;
-  --primary-hover: #7a00aa;
-  --primary-active: #c635ff;
-  --primary-muted: #53176b;
+  /* Primary brand */
+  --primary: #9147ae;
+  --primary-hover: #651183;
+  --primary-active: #9f04d7;
+  --primary-muted: #442152;
   --on-primary: #ffffff;
 
   /* Surfaces */
   --surface-primary: #ffffff;
   --surface-secondary: #976ba9;
-  --surface-elevated: #8f44ad;
+  --surface-elevated: #9147ae;
 
   /* Borders */
   --border-primary: #ffffff;
@@ -83,29 +87,28 @@ body {
 
 @media (prefers-color-scheme: dark) {
   :root {
-  --background: #8f44ad;
+  --background: #9147ae;
   --foreground: #ffffff;
 
   /* Primary brand */
-  --primary: #8524ab;
-  --primary-hover: #7a00aa;
-  --primary-active: #c635ff;
-  --primary-muted: #53176b;
+  --primary: #9147ae;
+  --primary-hover: #651183;
+  --primary-active: #9f04d7;
+  --primary-muted: #442152;
   --on-primary: #ffffff;
 
   /* Surfaces */
-  --surface-primary: #8f44ad;
+  --surface-primary: #ffffff;
   --surface-secondary: #976ba9;
-  --surface-elevated: #ecbaff;
+  --surface-elevated: #9147ae;
 
   /* Borders */
   --border-primary: #ffffff;
-  --border-secondary: #d1c4d6;
-  --border-focus: #c635ff;
+  --border-secondary: #c635ff;
 
   /* Text */
-  --text-primary: #ffffff;
-  --text-secondary: #666666;
+  --text-primary: #cc5ef7;
+  --text-secondary: #ffffff;
   --text-muted: #f7c0fd;
   --text-accent: #c635ff;
 
@@ -126,7 +129,5 @@ body {
   body {
     background: var(--background);
     color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif;
   }
-
 }

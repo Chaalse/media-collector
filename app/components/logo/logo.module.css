@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Scales ---------- */
+
+.xs img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.sm img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.md img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.lg img {
+  width: 8rem;
+  height: 8rem;
+}
+
+.xl img {
+  width: 12rem;
+  height: 12rem;
+}
+
+.main img {
+  width: 300px;
+  height: 300px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (min-width: 768px) {
+  .sm img {
+    width: 5rem;
+    height: 5rem;
+  }
+}
