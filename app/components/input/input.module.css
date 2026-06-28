@@ -21,14 +21,14 @@
   width: 100%;
   border-radius: 0.5rem;
   background-color: var(--surface-primary);
-  color: var(--text-primary);
+  color: var(--primary-hover);
   font-weight: bold;
   transition: border-color 200ms ease;
 }
 
 .input::placeholder {
   font-weight: bold;
-  color: var(--text-primary);
+  color: var(--primary-hover);
 }
 
 .input:focus {

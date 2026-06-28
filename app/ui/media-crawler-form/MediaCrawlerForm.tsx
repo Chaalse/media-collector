@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Input from '@/app/components/input/Input';
 import Button from '@/app/components/button/Button';
@@ -21,6 +22,7 @@ async function submitUrl(_url: string): Promise<void> {
 }
 
 export default function MediaCrawlerForm() {
+  const router = useRouter();
   const [url, setUrl] = useState('');
   const [urlError, setUrlError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -97,6 +99,14 @@ export default function MediaCrawlerForm() {
       {showSuccess && (
         <p className={styles.successMessage}>URL submitted successfully!</p>
       )}
+      <p className={styles.divider}>OR</p>
+      <Button
+        type="button"
+        fullWidth
+        onClick={() => router.push('/collector/collections')}
+      >
+        Check your collections!
+      </Button>
     </form>
   );
 }

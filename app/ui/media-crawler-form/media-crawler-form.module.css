@@ -23,6 +23,15 @@
   line-height: 1.4;
 }
 
+.divider {
+  font-size: 0.875rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-weight: 600;
+  line-height: 1;
+  margin: 0;
+}
+
 @media (min-width: 768px) {
   .logo img {
     width: 5rem;
